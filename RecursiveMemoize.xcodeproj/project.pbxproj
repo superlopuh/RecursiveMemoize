@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A60B20D11AEA40530057DFDB /* RecursiveMemoize.h in Headers */ = {isa = PBXBuildFile; fileRef = A60B20D01AEA40530057DFDB /* RecursiveMemoize.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A60B20D71AEA40530057DFDB /* RecursiveMemoize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60B20CB1AEA40530057DFDB /* RecursiveMemoize.framework */; };
+		A60B20DE1AEA40530057DFDB /* RecursiveMemoizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B20DD1AEA40530057DFDB /* RecursiveMemoizeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A60B20D81AEA40530057DFDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A60B20C21AEA40530057DFDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A60B20CA1AEA40530057DFDB;
+			remoteInfo = RecursiveMemoize;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A60B20CB1AEA40530057DFDB /* RecursiveMemoize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecursiveMemoize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60B20CF1AEA40530057DFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A60B20D01AEA40530057DFDB /* RecursiveMemoize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecursiveMemoize.h; sourceTree = "<group>"; };
+		A60B20D61AEA40530057DFDB /* RecursiveMemoizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecursiveMemoizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60B20DC1AEA40530057DFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A60B20DD1AEA40530057DFDB /* RecursiveMemoizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveMemoizeTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A60B20C71AEA40530057DFDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60B20D31AEA40530057DFDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60B20D71AEA40530057DFDB /* RecursiveMemoize.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A60B20C11AEA40530057DFDB = {
+			isa = PBXGroup;
+			children = (
+				A60B20CD1AEA40530057DFDB /* RecursiveMemoize */,
+				A60B20DA1AEA40530057DFDB /* RecursiveMemoizeTests */,
+				A60B20CC1AEA40530057DFDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A60B20CC1AEA40530057DFDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A60B20CB1AEA40530057DFDB /* RecursiveMemoize.framework */,
+				A60B20D61AEA40530057DFDB /* RecursiveMemoizeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A60B20CD1AEA40530057DFDB /* RecursiveMemoize */ = {
+			isa = PBXGroup;
+			children = (
+				A60B20D01AEA40530057DFDB /* RecursiveMemoize.h */,
+				A60B20CE1AEA40530057DFDB /* Supporting Files */,
+			);
+			path = RecursiveMemoize;
+			sourceTree = "<group>";
+		};
+		A60B20CE1AEA40530057DFDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A60B20CF1AEA40530057DFDB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A60B20DA1AEA40530057DFDB /* RecursiveMemoizeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A60B20DD1AEA40530057DFDB /* RecursiveMemoizeTests.swift */,
+				A60B20DB1AEA40530057DFDB /* Supporting Files */,
+			);
+			path = RecursiveMemoizeTests;
+			sourceTree = "<group>";
+		};
+		A60B20DB1AEA40530057DFDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A60B20DC1AEA40530057DFDB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A60B20C81AEA40530057DFDB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60B20D11AEA40530057DFDB /* RecursiveMemoize.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A60B20CA1AEA40530057DFDB /* RecursiveMemoize */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A60B20E11AEA40530057DFDB /* Build configuration list for PBXNativeTarget "RecursiveMemoize" */;
+			buildPhases = (
+				A60B20C61AEA40530057DFDB /* Sources */,
+				A60B20C71AEA40530057DFDB /* Frameworks */,
+				A60B20C81AEA40530057DFDB /* Headers */,
+				A60B20C91AEA40530057DFDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RecursiveMemoize;
+			productName = RecursiveMemoize;
+			productReference = A60B20CB1AEA40530057DFDB /* RecursiveMemoize.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A60B20D51AEA40530057DFDB /* RecursiveMemoizeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A60B20E41AEA40530057DFDB /* Build configuration list for PBXNativeTarget "RecursiveMemoizeTests" */;
+			buildPhases = (
+				A60B20D21AEA40530057DFDB /* Sources */,
+				A60B20D31AEA40530057DFDB /* Frameworks */,
+				A60B20D41AEA40530057DFDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A60B20D91AEA40530057DFDB /* PBXTargetDependency */,
+			);
+			name = RecursiveMemoizeTests;
+			productName = RecursiveMemoizeTests;
+			productReference = A60B20D61AEA40530057DFDB /* RecursiveMemoizeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A60B20C21AEA40530057DFDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = bluetatami;
+				TargetAttributes = {
+					A60B20CA1AEA40530057DFDB = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					A60B20D51AEA40530057DFDB = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A60B20C51AEA40530057DFDB /* Build configuration list for PBXProject "RecursiveMemoize" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A60B20C11AEA40530057DFDB;
+			productRefGroup = A60B20CC1AEA40530057DFDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A60B20CA1AEA40530057DFDB /* RecursiveMemoize */,
+				A60B20D51AEA40530057DFDB /* RecursiveMemoizeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A60B20C91AEA40530057DFDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60B20D41AEA40530057DFDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60B20C61AEA40530057DFDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60B20D21AEA40530057DFDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60B20DE1AEA40530057DFDB /* RecursiveMemoizeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A60B20D91AEA40530057DFDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A60B20CA1AEA40530057DFDB /* RecursiveMemoize */;
+			targetProxy = A60B20D81AEA40530057DFDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A60B20DF1AEA40530057DFDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A60B20E01AEA40530057DFDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A60B20E21AEA40530057DFDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = RecursiveMemoize/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A60B20E31AEA40530057DFDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = RecursiveMemoize/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A60B20E51AEA40530057DFDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RecursiveMemoizeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A60B20E61AEA40530057DFDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RecursiveMemoizeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A60B20C51AEA40530057DFDB /* Build configuration list for PBXProject "RecursiveMemoize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60B20DF1AEA40530057DFDB /* Debug */,
+				A60B20E01AEA40530057DFDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A60B20E11AEA40530057DFDB /* Build configuration list for PBXNativeTarget "RecursiveMemoize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60B20E21AEA40530057DFDB /* Debug */,
+				A60B20E31AEA40530057DFDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A60B20E41AEA40530057DFDB /* Build configuration list for PBXNativeTarget "RecursiveMemoizeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60B20E51AEA40530057DFDB /* Debug */,
+				A60B20E61AEA40530057DFDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A60B20C21AEA40530057DFDB /* Project object */;
+}
