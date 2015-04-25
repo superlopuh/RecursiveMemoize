@@ -8,8 +8,8 @@
 
 let factF: () -> Int = {1}
 
-let factG: (Int, Int) -> Int = {(pred: Int, predResult: Int) -> Int in
-    return pred * predResult
+let factG: (Int, Int) -> Int = {(input: Int, predResult: Int) -> Int in
+    return input * predResult
 }
 
 public let factorial = rho(factF, factG)
