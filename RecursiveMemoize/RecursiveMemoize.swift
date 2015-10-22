@@ -10,15 +10,13 @@ public protocol Initialisable {
     init()
 }
 
-public func memoizedRho<T, P: Primable, R: Initialisable where T == P.ArgType, P: Hashable>(f: T -> R, g: (P,R) -> R) -> P -> R {
+public func memoizedRho<T, P: Primable, R: Initialisable where T == P.ArgType, P: Hashable>(f: T -> R, _ g: (P,R) -> R) -> P -> R {
     var cache = [P:R]()
     
     // Local functions cannot reference themselves
     
     // Hack found on stackoverflow
-    var memoized = {(input: P) -> R in R()}
-    
-    memoized = {(input: P) -> R in
+    func memoized(input: P) -> R {
         if let value = cache[input] {
             return value
         } else {

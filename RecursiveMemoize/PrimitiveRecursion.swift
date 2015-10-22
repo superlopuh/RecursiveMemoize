@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 bluetatami. All rights reserved.
 //
 
-public func rho<T, P: Primable,R where T == P.ArgType>(f: T -> R, g: (P,R) -> R)(_ input: P) -> R {
+public func rho<T, P: Primable,R where T == P.ArgType>(f: T -> R, _ g: (P,R) -> R)(_ input: P) -> R {
     if input.isBase {
         return f(input.arguments)
     } else {

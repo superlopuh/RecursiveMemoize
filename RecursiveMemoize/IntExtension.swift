@@ -7,7 +7,7 @@
 //
 
 extension Int: Primable {
-    typealias ArgType = ()
+    public typealias ArgType = ()
     
     public var arguments: () {return ()}
     

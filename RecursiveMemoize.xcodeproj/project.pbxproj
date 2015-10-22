@@ -176,6 +176,7 @@
 		A60B20C21AEA40530057DFDB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = bluetatami;
 				TargetAttributes = {
