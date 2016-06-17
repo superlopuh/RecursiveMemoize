@@ -9,28 +9,16 @@
 struct NChooseKPair {
     var n: Int
     var k: Int
-}
-
-extension NChooseKPair: BackwardIndexType {
-    func predecessor() -> NChooseKPair {
-        return NChooseKPair(n: n - 1, k: k - 1)
-    }
-}
-
-extension NChooseKPair: Primable {
-    typealias ArgType = Int
     
-    var arguments: ArgType {return self.n}
-    
-    var isBase: Bool {
-        return self.k == 0
+    init(_ n: Int, _ k: Int) {
+        self.n = n
+        self.k = k
     }
 }
 
 extension NChooseKPair: Hashable {
     var hashValue: Int {
-        let mult = Int.multiplyWithOverflow(n.hashValue, 3).0
-        return Int.addWithOverflow(mult, k.hashValue).0
+        return n.hashValue &* 3 &+ k.hashValue
     }
 }
 
@@ -38,17 +26,18 @@ func ==(lhs: NChooseKPair, rhs: NChooseKPair) -> Bool {
     return (lhs.k == rhs.k) && (lhs.n == rhs.n)
 }
 
-func chooseF(n: Int) -> Int {
-    return 1
-}
-
 func chooseG(pair: NChooseKPair, predResult: Int) -> Int {
     return pair.n * predResult / pair.k
 }
 
-let memoNChooseK = memoizedRho(chooseF, chooseG)
+let memoNChooseK = memoizedRho(
+    f: { _ in 1 },
+    g: chooseG,
+    decrement: { pair in NChooseKPair(pair.n - 1, pair.k - 1) },
+    isBase: { $0.n == 0 }
+)
 
 public func nChooseK(n: Int, k: Int) -> Int {
     // n choose k == n choose (k-1), only want to compute one of those
-    return memoNChooseK(NChooseKPair(n: n, k: min(k, n - k)))
+    return memoNChooseK(NChooseKPair(n, min(k, n - k)))
 }

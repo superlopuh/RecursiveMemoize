@@ -6,10 +6,9 @@
 //  Copyright (c) 2015 bluetatami. All rights reserved.
 //
 
-let factF: () -> Int = {1}
-
-let factG: (Int, Int) -> Int = {(input: Int, predResult: Int) -> Int in
-    return input * predResult
-}
-
-public let factorial = rho(factF, factG)
+public let factorial = rho(
+    f: { _ in 1},
+    g: *,
+    decrement: { $0 - 1 },
+    isBase: { $0 == 0 }
+)

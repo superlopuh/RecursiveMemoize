@@ -6,25 +6,18 @@
 //  Copyright (c) 2015 bluetatami. All rights reserved.
 //
 
-public protocol Initialisable {
-    init()
-}
-
-public func memoizedRho<T, P: Primable, R: Initialisable where T == P.ArgType, P: Hashable>(f: T -> R, _ g: (P,R) -> R) -> P -> R {
-    var cache = [P:R]()
+public func memoizedRho<P: Hashable,R>(f f: P -> R, g: (P, R) -> R, decrement: P -> P, isBase: P -> Bool) -> P -> R {
+    var cache: [P:R] = [:]
     
-    // Local functions cannot reference themselves
-    
-    // Hack found on stackoverflow
     func memoized(input: P) -> R {
         if let value = cache[input] {
             return value
         } else {
             let newValue: R
-            if input.isBase {
-                newValue = f(input.arguments)
+            if isBase(input) {
+                newValue = f(input)
             } else {
-                newValue = g(input, memoized(input.predecessor()))
+                newValue = g(input, memoized(decrement(input)))
             }
             cache[input] = newValue
             return newValue
