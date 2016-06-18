@@ -26,7 +26,7 @@ If the function can be represented as a [primitive recursive function](http://en
 
 So here's what I came up with:
 
-The argument iterated on must conform to these protocols:
+All the functions necessary for primitive recursion are stored in the `Rho` struct.
 ```swift
 public struct Rho<Input, Output> {
     public let isBase: Input -> Bool
