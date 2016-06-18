@@ -10,10 +10,7 @@
 		A60B20D11AEA40530057DFDB /* RecursiveMemoize.h in Headers */ = {isa = PBXBuildFile; fileRef = A60B20D01AEA40530057DFDB /* RecursiveMemoize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A60B20D71AEA40530057DFDB /* RecursiveMemoize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60B20CB1AEA40530057DFDB /* RecursiveMemoize.framework */; };
 		A60B20DE1AEA40530057DFDB /* RecursiveMemoizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B20DD1AEA40530057DFDB /* RecursiveMemoizeTests.swift */; };
-		A60B20E81AEA43B80057DFDB /* PrimitiveRecursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B20E71AEA43B80057DFDB /* PrimitiveRecursion.swift */; };
-		A60B20EE1AEA53210057DFDB /* RecursiveMemoize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B20ED1AEA53210057DFDB /* RecursiveMemoize.swift */; };
-		A60B20F01AEA58640057DFDB /* Factorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B20EF1AEA58640057DFDB /* Factorial.swift */; };
-		A60B20F21AEA58AE0057DFDB /* NChooseK.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B20F11AEA58AE0057DFDB /* NChooseK.swift */; };
+		A6689F0C1D148A8800F1CB33 /* Rho.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6689F0B1D148A8800F1CB33 /* Rho.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +30,7 @@
 		A60B20D61AEA40530057DFDB /* RecursiveMemoizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecursiveMemoizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60B20DC1AEA40530057DFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A60B20DD1AEA40530057DFDB /* RecursiveMemoizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveMemoizeTests.swift; sourceTree = "<group>"; };
-		A60B20E71AEA43B80057DFDB /* PrimitiveRecursion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimitiveRecursion.swift; sourceTree = "<group>"; };
-		A60B20ED1AEA53210057DFDB /* RecursiveMemoize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursiveMemoize.swift; sourceTree = "<group>"; };
-		A60B20EF1AEA58640057DFDB /* Factorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factorial.swift; sourceTree = "<group>"; };
-		A60B20F11AEA58AE0057DFDB /* NChooseK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NChooseK.swift; sourceTree = "<group>"; };
+		A6689F0B1D148A8800F1CB33 /* Rho.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rho.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				A60B20D01AEA40530057DFDB /* RecursiveMemoize.h */,
-				A60B20E71AEA43B80057DFDB /* PrimitiveRecursion.swift */,
-				A60B20ED1AEA53210057DFDB /* RecursiveMemoize.swift */,
-				A60B20EF1AEA58640057DFDB /* Factorial.swift */,
-				A60B20F11AEA58AE0057DFDB /* NChooseK.swift */,
+				A6689F0B1D148A8800F1CB33 /* Rho.swift */,
 				A60B20CE1AEA40530057DFDB /* Supporting Files */,
 			);
 			path = RecursiveMemoize;
@@ -222,10 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A60B20E81AEA43B80057DFDB /* PrimitiveRecursion.swift in Sources */,
-				A60B20F01AEA58640057DFDB /* Factorial.swift in Sources */,
-				A60B20EE1AEA53210057DFDB /* RecursiveMemoize.swift in Sources */,
-				A60B20F21AEA58AE0057DFDB /* NChooseK.swift in Sources */,
+				A6689F0C1D148A8800F1CB33 /* Rho.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
