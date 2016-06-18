@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		A60B20D11AEA40530057DFDB /* RecursiveMemoize.h in Headers */ = {isa = PBXBuildFile; fileRef = A60B20D01AEA40530057DFDB /* RecursiveMemoize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A60B20D71AEA40530057DFDB /* RecursiveMemoize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60B20CB1AEA40530057DFDB /* RecursiveMemoize.framework */; };
-		A60B20DE1AEA40530057DFDB /* RecursiveMemoizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B20DD1AEA40530057DFDB /* RecursiveMemoizeTests.swift */; };
 		A6689F0C1D148A8800F1CB33 /* Rho.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6689F0B1D148A8800F1CB33 /* Rho.swift */; };
+		A6689F0E1D148D8F00F1CB33 /* FactorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6689F0D1D148D8F00F1CB33 /* FactorialTests.swift */; };
+		A6689F101D14EA2400F1CB33 /* NChooseKTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6689F0F1D14EA2400F1CB33 /* NChooseKTest.swift */; };
+		A6689F121D14EE6200F1CB33 /* Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6689F111D14EE6200F1CB33 /* Shuffle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +31,10 @@
 		A60B20D01AEA40530057DFDB /* RecursiveMemoize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecursiveMemoize.h; sourceTree = "<group>"; };
 		A60B20D61AEA40530057DFDB /* RecursiveMemoizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecursiveMemoizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60B20DC1AEA40530057DFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A60B20DD1AEA40530057DFDB /* RecursiveMemoizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveMemoizeTests.swift; sourceTree = "<group>"; };
 		A6689F0B1D148A8800F1CB33 /* Rho.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rho.swift; sourceTree = "<group>"; };
+		A6689F0D1D148D8F00F1CB33 /* FactorialTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactorialTests.swift; sourceTree = "<group>"; };
+		A6689F0F1D14EA2400F1CB33 /* NChooseKTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NChooseKTest.swift; sourceTree = "<group>"; };
+		A6689F111D14EE6200F1CB33 /* Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shuffle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +95,9 @@
 		A60B20DA1AEA40530057DFDB /* RecursiveMemoizeTests */ = {
 			isa = PBXGroup;
 			children = (
-				A60B20DD1AEA40530057DFDB /* RecursiveMemoizeTests.swift */,
+				A6689F0D1D148D8F00F1CB33 /* FactorialTests.swift */,
+				A6689F0F1D14EA2400F1CB33 /* NChooseKTest.swift */,
+				A6689F111D14EE6200F1CB33 /* Shuffle.swift */,
 				A60B20DB1AEA40530057DFDB /* Supporting Files */,
 			);
 			path = RecursiveMemoizeTests;
@@ -221,7 +227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A60B20DE1AEA40530057DFDB /* RecursiveMemoizeTests.swift in Sources */,
+				A6689F101D14EA2400F1CB33 /* NChooseKTest.swift in Sources */,
+				A6689F121D14EE6200F1CB33 /* Shuffle.swift in Sources */,
+				A6689F0E1D148D8F00F1CB33 /* FactorialTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
