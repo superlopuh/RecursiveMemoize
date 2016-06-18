@@ -28,56 +28,57 @@ So here's what I came up with:
 
 The argument iterated on must conform to these protocols:
 ```swift
-protocol BackwardIndexType {
-    func predecessor() -> Self
-}
-
-protocol Primable: Equatable, BackwardIndexType {
-    typealias ArgType
+public struct Rho<Input, Output> {
+    public let isBase: Input -> Bool
+    public let decrement: Input -> Input
+    public let baseFunction: Input -> Output
+    public let recursionFunction: (Input, Output) -> Output
     
-    var arguments: ArgType {get}
-    
-    var isBase: Bool {get}
+    public init(isBase: Input -> Bool, decrement: Input -> Input, baseFunction: Input -> Output, recursionFunction: (Input, Output) -> Output) {
+        self.isBase = isBase
+        self.decrement = decrement
+        self.baseFunction = baseFunction
+        self.recursionFunction = recursionFunction
+    }
 }
 ```
 
 Primitive recursion without memoization:
 ```swift
-func rho<T, P: Primable,R where T == P.ArgType>(f: T -> R, g: (P,R) -> R)(_ input: P) -> R {
-    if input.isBase {
-        return f(input.arguments)
-    } else {
-        return g(input, rho(f, g)(input.predecessor()))
-    }
-}
-```
-
-Primitive recursion with memoization.
-```swift
-public func memoizedRho<T, P: Primable, R: Initialisable where T == P.ArgType, P: Hashable>(f: T -> R, g: (P,R) -> R) -> P -> R {
-    var cache = [P:R]()
-    
-    // Local functions cannot reference themselves
-    
-    // Hack found on stackoverflow
-    var memoized = {(input: P) -> R in R()}
-    
-    memoized = {(input: P) -> R in
-        if let value = cache[input] {
-            return value
+extension Rho {
+    public func compute(input: Input) -> Output {
+        if isBase(input) {
+            return baseFunction(input)
         } else {
-            let newValue: R
-            if input.isBase {
-                newValue = f(input.arguments)
-            } else {
-                newValue = g(input, memoized(input.predecessor()))
-            }
-            cache[input] = newValue
-            return newValue
+            let recursiveResult = compute(decrement(input))
+            return recursionFunction(input, recursiveResult)
         }
     }
-    
-    return memoized
 }
 ```
 
+Primitive recursion with memoization:
+```swift
+extension Rho where Input: Hashable {
+    public func getMemoizedCompute() -> Input -> Output {
+        var memo = [Input:Output]()
+        
+        func memoizedCompute(input: Input) -> Output {
+            if let value = memo[input] {
+                return value
+            } else {
+                let newValue: Output
+                if isBase(input) {
+                    newValue = baseFunction(input)
+                } else {
+                    newValue = recursionFunction(input, memoizedCompute(decrement(input)))
+                }
+                memo[input] = newValue
+                return newValue
+            }
+        }
+        
+        return memoizedCompute
+    }
+}
+```
