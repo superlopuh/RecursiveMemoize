@@ -7,12 +7,12 @@
 //
 
 public struct Rho<Input, Output> {
-    public let isBase: Input -> Bool
-    public let decrement: Input -> Input
-    public let baseFunction: Input -> Output
+    public let isBase: (Input) -> Bool
+    public let decrement: (Input) -> Input
+    public let baseFunction: (Input) -> Output
     public let recursionFunction: (Input, Output) -> Output
     
-    public init(isBase: Input -> Bool, decrement: Input -> Input, baseFunction: Input -> Output, recursionFunction: (Input, Output) -> Output) {
+    public init(isBase: @escaping (Input) -> Bool, decrement: @escaping (Input) -> Input, baseFunction: @escaping (Input) -> Output, recursionFunction: @escaping (Input, Output) -> Output) {
         self.isBase = isBase
         self.decrement = decrement
         self.baseFunction = baseFunction
@@ -21,7 +21,7 @@ public struct Rho<Input, Output> {
 }
 
 extension Rho {
-    public func compute(input: Input) -> Output {
+    public func compute(_ input: Input) -> Output {
         if isBase(input) {
             return baseFunction(input)
         } else {
@@ -32,10 +32,10 @@ extension Rho {
 }
 
 extension Rho where Input: Hashable {
-    public func getMemoizedCompute() -> Input -> Output {
+    public func getMemoizedCompute() -> (Input) -> Output {
         var memo = [Input:Output]()
         
-        func memoizedCompute(input: Input) -> Output {
+        func memoizedCompute(_ input: Input) -> Output {
             if let value = memo[input] {
                 return value
             } else {

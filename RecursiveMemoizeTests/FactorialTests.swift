@@ -43,22 +43,22 @@ class FactorialTests: XCTestCase {
     }
     
     func testPerformance() {
-        self.measureBlock {
+        self.measure {
             for _ in 0..<numberOfRuns {
                 let compute = factorial.compute
                 for k in range.shuffled() {
-                    compute(k)
+                    _ = compute(k)
                 }
             }
         }
     }
     
     func testMemoizedPerformance() {
-        self.measureBlock {
+        self.measure {
             for _ in 0..<numberOfRuns {
                 let compute = factorial.getMemoizedCompute()
                 for k in range.shuffled() {
-                    compute(k)
+                    _ = compute(k)
                 }
             }
         }

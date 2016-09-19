@@ -8,13 +8,13 @@
 
 import Darwin
 
-extension CollectionType {
-    func shuffled() -> [Generator.Element] {
+extension Collection {
+    func shuffled() -> [Iterator.Element] {
         return Array(self).shuffled()
     }
 }
 
-extension MutableCollectionType where Index: RandomAccessIndexType, Index.Stride == Int {
+extension MutableCollection where Index: Strideable, Index.Stride == Int {
     /// Return a copy of `self` with its elements shuffled
     func shuffled() -> Self {
         var list = self
@@ -23,7 +23,7 @@ extension MutableCollectionType where Index: RandomAccessIndexType, Index.Stride
     }
 }
 
-extension MutableCollectionType where Index: RandomAccessIndexType, Index.Stride == Int {
+extension MutableCollection where Index: Strideable, Index.Stride == Int {
     /// Shuffle the elements of `self` in-place.
     mutating func shuffle() {
         // empty and single-element collections don't shuffle

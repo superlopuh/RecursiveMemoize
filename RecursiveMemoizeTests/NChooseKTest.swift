@@ -66,10 +66,10 @@ class NChooseKTest: XCTestCase {
     
     func testPerformance() {
         let compute = nChooseK.compute
-        self.measureBlock {
+        self.measure {
             for _ in 0..<numberOfRuns {
                 for pair in pairs.shuffled() {
-                    compute(pair)
+                    _ = compute(pair)
                 }
             }
         }
@@ -77,10 +77,10 @@ class NChooseKTest: XCTestCase {
     
     func testMemoizedPerformance() {
         let compute = nChooseK.getMemoizedCompute()
-        self.measureBlock {
+        self.measure {
             for _ in 0..<numberOfRuns {
                 for pair in pairs.shuffled() {
-                    compute(pair)
+                    _ = compute(pair)
                 }
             }
         }
