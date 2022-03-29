@@ -1,4 +1,5 @@
 # RecursiveMemoize
+
 An implementation of recursive memoization in Swift.
 
 The motivation for this was a realisation that the standard memoization technique in swift is not very good at memoizing recursive functions.
@@ -24,61 +25,30 @@ If you were to memoize a factorial function, and then compute 15!, and subsequen
 
 If the function can be represented as a [primitive recursive function](http://en.wikipedia.org/wiki/Primitive_recursive_function), then the memoization can be done at each step of the recursion.
 
-So here's what I came up with:
-
-All the functions necessary for primitive recursion are stored in the `Rho` struct.
 ```swift
-public struct Rho<Input, Output> {
-    public let isBase: Input -> Bool
-    public let decrement: Input -> Input
-    public let baseFunction: Input -> Output
-    public let recursionFunction: (Input, Output) -> Output
-    
-    public init(isBase: Input -> Bool, decrement: Input -> Input, baseFunction: Input -> Output, recursionFunction: (Input, Output) -> Output) {
-        self.isBase = isBase
-        self.decrement = decrement
-        self.baseFunction = baseFunction
-        self.recursionFunction = recursionFunction
-    }
+// Standard recursive definition of factorial
+public func fact0(_ n: Int) -> Int {
+    return n < 2 ? 1 : n * fact0(n - 1)
 }
+
+// Standard memoized factorial
+let memoFact0 = memoize(fact0)
+
+// Explicitly recursive factorial definition
+let fact1 = recursive { n, fact in n < 2 ? 1 : n * fact(n - 1) }
+
+// Recursively memoized factorial
+let memoFact1 = fact1.memoized()
 ```
 
-Primitive recursion without memoization:
-```swift
-extension Rho {
-    public func compute(input: Input) -> Output {
-        if isBase(input) {
-            return baseFunction(input)
-        } else {
-            let recursiveResult = compute(decrement(input))
-            return recursionFunction(input, recursiveResult)
-        }
-    }
-}
-```
+Usage:
 
-Primitive recursion with memoization:
 ```swift
-extension Rho where Input: Hashable {
-    public func getMemoizedCompute() -> Input -> Output {
-        var memo = [Input:Output]()
-        
-        func memoizedCompute(input: Input) -> Output {
-            if let value = memo[input] {
-                return value
-            } else {
-                let newValue: Output
-                if isBase(input) {
-                    newValue = baseFunction(input)
-                } else {
-                    newValue = recursionFunction(input, memoizedCompute(decrement(input)))
-                }
-                memo[input] = newValue
-                return newValue
-            }
-        }
-        
-        return memoizedCompute
-    }
-}
+memoFact0(15) // 14 multiplications
+memoFact0(15) // 0 multiplications, one lookup
+memoFact0(14) // 13 multiplications
+
+memoFact1(15) // 14 multiplications
+memoFact1(15) // 0 multiplications, one lookup
+memoFact1(14) // 0 multiplications, one lookup
 ```
